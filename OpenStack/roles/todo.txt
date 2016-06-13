@@ -1,0 +1,12 @@
+TODO LIST:
+  - Narrowed down the 404/500 errors: Controller2 is not properly forming clustering with Controller1
+        - MariaDB is failing to allow connections on Controller2 thus causing the openslack client to report 500
+        - 404s were due to service publicURL not populating, probably cause by MariaDB refusing connections
+  - Compute nodes now register, however AMQ is reporting that the connect gets closed every minute or so
+        - Mostlikely issue with HAProxy or TCP Keepalive (take PCAP)
+
+
+  - Deploy Network
+  - Dashboard
+  - Integrate with current GlusterFS
+      - Need to add SSD/SAS to Gluster
